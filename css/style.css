@@ -1,0 +1,361 @@
+/* Globale Variables  */
+
+:root {
+    --almostWhite: hsl(0, 0%, 98%);
+    --almostBlack: hsl(0, 0%, 8%);
+    --mediumGray: hsl(0, 0%, 41%);
+}
+
+/* Globale Rules  */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 500;
+    background-color: var(--almostWhite);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--almostWhite);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--mediumGray);
+    border-radius: 10px;
+}
+
+.display-none {
+    display: none !important;
+}
+
+/* Start Header  */
+
+header {
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+}
+
+header div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+header div:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+header nav .icon-close-menu,
+header .icon-menu {
+    display: none;
+}
+
+header nav>ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+}
+
+header nav ul li a {
+    color: var(--mediumGray);
+    transition: 0.4s;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+header nav ul li a:hover {
+    color: var(--almostBlack);
+}
+
+header nav ul li .features-blog,
+header nav ul li .company-blog {
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    background-color: #fff;
+    position: absolute;
+    top: 40px;
+    left: -25px;
+    border-radius: 14px;
+    box-shadow: 0 0 8px 1px var(--mediumGray);
+    cursor: pointer;
+    color: var(--mediumGray);
+}
+
+header nav ul li .features-blog {
+    left: -30px;
+}
+
+header nav ul li .features-blog li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+header nav ul li .company-blog {
+    left: 0;
+    text-align: center;
+}
+
+header nav .btns {
+    display: none;
+}
+
+header nav .btns button:hover {
+    color: var(--almostBlack);
+    border-color: var(--almostBlack);
+}
+
+header nav .btns button,
+header div:nth-child(2) button {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 8px 16px;
+    color: var(--mediumGray);
+    transition: 0.4s;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+header nav .btns button:first-child:hover,
+header div:nth-child(2) button:first-child:hover {
+    color: var(--almostBlack);
+}
+
+header nav .btns button:last-child,
+header div:nth-child(2) button:last-child {
+    border: 1px solid var(--mediumGray);
+    border-radius: 12px;
+}
+
+header nav .btns button:last-child:hover,
+header div:nth-child(2) button:last-child:hover {
+    color: var(--almostBlack);
+    border-color: var(--almostBlack);
+}
+
+@media (max-width: 767px) {
+    header {
+        padding: 0 6px;
+    }
+
+    header .icon-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header nav.active {
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        background-color: var(--almostWhite);
+        flex-direction: column;
+    }
+
+    header nav.active .icon-close-menu {
+        display: block;
+        cursor: pointer;
+        width: 26px;
+        height: 26px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    header nav.active ul {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 10px;
+        align-items: flex-start;
+    }
+
+    header nav.active ul li .features-blog,
+    header nav.active ul li .company-blog {
+        position: relative;
+        left: 10px;
+        top: 20px;
+    }
+
+    header nav.active .btns {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    header div:nth-child(2) {
+        display: none;
+    }
+}
+
+/* End Header  */
+
+/* Start Landing  */
+
+main {
+    display: flex;
+    height: calc(100vh - 75px);
+}
+
+main .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+main .container .content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+main .container .content h1 {
+    font-size: 80px;
+    font-weight: 700;
+    color: var(--almostBlack);
+}
+
+main .container .content p {
+    font-size: 18px;
+    color: var(--mediumGray);
+    line-height: 1.6;
+    width: 75%;
+}
+
+main .container .content button {
+    width: fit-content;
+    border: none;
+    outline: none;
+    background-color: var(--almostBlack);
+    border: 1px solid var(--almostBlack);
+    padding: 14px 34px;
+    color: var(--almostWhite);
+    border-radius: 12px;
+    transition: 0.4s;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+main .container .content button:hover {
+    color: var(--almostBlack);
+    background-color: var(--almostWhite);
+    border: 1px solid var(--almostBlack);
+}
+
+main .container .content .clients {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+main .container .figure picture img {
+    max-height: 900px;
+}
+
+@media (max-width: 767px) {
+    main .container {
+        flex-direction: column-reverse;
+        padding: 0;
+        margin: 0;
+    }
+
+    main .container .content {
+        text-align: center;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    main .container .content h1 {
+        font-size: 40px;
+    }
+
+    main .container .content p {
+        width: 100%;
+    }
+
+    main .container .content button {
+        margin: 0 auto;
+    }
+
+    main .container .content .clients {
+        justify-content: space-between;
+        gap: 0;
+    }
+}
+
+/* End Landing  */

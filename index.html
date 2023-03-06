@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Intro section with dropdown navigation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <div class="logo">
+                <img src="./images/logo.svg" alt="Logo">
+            </div>
+            <nav>
+                <img class="icon-close-menu" src="./images/icon-close-menu.svg" alt="Close Menu Icon">
+                <ul>
+                    <li class="features">
+                        <a href="#">
+                            Features <img class="feautures-img down" src="./images/icon-arrow-down.svg"
+                                alt="Arrow Down Icon">
+                        </a>
+                        <ul class="features-blog display-none">
+                            <li>
+                                <img src="./images/icon-todo.svg" alt="icon-todo"><span>Todo List</span>
+                            </li>
+                            <li>
+                                <img src="./images/icon-calendar.svg" alt="icon-calendar"><span>Calendar</span>
+                            </li>
+                            <li>
+                                <img src="./images/icon-reminders.svg" alt="icon-reminders"><span>Reminders</span>
+                            </li>
+                            <li>
+                                <img src="./images/icon-planning.svg" alt="icon-planning"><span>Planning</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="company">
+                        <a href="#">
+                            Company <img class="company-img down" src="./images/icon-arrow-down.svg"
+                                alt="Arrow Down Icon">
+                        </a>
+                        <ul class="company-blog display-none">
+                            <li>History</li>
+                            <li>Our Team</li>
+                            <li>Blog</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Careers</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                </ul>
+                <div class="btns">
+                    <button>Login</button>
+                    <button>Register</button>
+                </div>
+            </nav>
+        </div>
+        <div>
+            <button>Login</button>
+            <button>Register</button>
+        </div>
+        <img class="icon-menu" src="./images/icon-menu.svg" alt="Menu Icon">
+    </header>
+    <main>
+        <div class="container">
+            <div class="content">
+                <h1>Make remote work</h1>
+                <p>Get your team in sync, no matter your location. Streamline processes,
+                    create team rituals, and watch productivity soar.
+                </p>
+                <button>Learn more</button>
+                <div class="clients">
+                    <img src="./images/client-databiz.svg" alt="client-databiz">
+                    <img src="./images/client-audiophile.svg" alt="client-audiophile">
+                    <img src="./images/client-meet.svg" alt="client-meet">
+                    <img src="./images/client-maker.svg" alt="client-maker">
+                </div>
+            </div>
+            <div class="figure">
+                <picture>
+                    <source media="(max-width:767px)" srcset="./images/image-hero-mobile.png">
+                    <img src="./images/image-hero-desktop.png" alt="Hero Image">
+                </picture>
+            </div>
+        </div>
+    </main>
+    <script src="./main.js"></script>
+</body>
+
+</html>
