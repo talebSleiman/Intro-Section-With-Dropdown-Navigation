@@ -9,14 +9,17 @@ let companyBlog = document.querySelector(".company-blog");
 
 let closeMenu = document.querySelector(".icon-close-menu");
 let openMenu = document.querySelector(".icon-menu");
+let overlay = document.querySelector(".overlay")
 let nav = document.querySelector("nav");
 
 openMenu.addEventListener("click", () => {
     nav.classList.add("active");
+    overlay.classList.add("active");
 });
 
 closeMenu.addEventListener("click", () => {
     nav.classList.remove("active");
+    overlay.classList.remove("active");
 });
 
 
